@@ -9,7 +9,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #1d1f262c;
-  margin: 0 100px;
   padding: 20px 0;
 }
 .logo-and-menu {
@@ -18,14 +17,14 @@
 .menu {
   display: flex;
   list-style-type: none;
-  padding: 0 30px;
+  padding-left: 30px;
 }
 .menu li {
   opacity: 0.75;
   margin: 0 10px;
   font-size: 1rem;
   cursor: pointer;
-  height: 250%;
+  height: 240%;
 }
 .menu li:hover {
   opacity: 1;
