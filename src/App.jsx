@@ -1,5 +1,5 @@
-import { Navbar } from "./navbar/Navbar";
-import { ProductBody } from "./body/ProductBody";
+import { Navbar } from "./layout/navbar/Navbar";
+import { ProductBody } from "./layout/body/ProductBody";
 import "./App.css";
 export const App = () => {
   return (

@@ -1,4 +1,4 @@
-import * as img from "../images/images";
+import * as img from "../../images/images";
 export const ProductGallery = () => {
   const images = [
     { id: 1, img: img.img_product_1, class: "img_product_1" },
@@ -11,7 +11,7 @@ export const ProductGallery = () => {
       <div className="product-img">
         <img className="image-main" src={img.img_product_1} alt="product1" />
         {images.map((x) => (
-          <div className="images-product">
+          <div key={x.id} className="images-product">
             <img
               className={`img-product p-${x.class}`}
               src={x.img}

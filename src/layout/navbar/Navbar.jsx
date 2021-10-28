@@ -1,5 +1,9 @@
 import "./Navbar.css";
-import * as img from "../images/images";
+import * as img from "../../images/images";
+import * as icon from "../../icon/icons";
+
+import { IconCart } from "../../icon/IconCart";
+
 export const Navbar = () => {
   const textsLi = [
     { id: 1, text: "Collections" },
@@ -12,7 +16,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="logo-and-menu">
         <div className="logo-navbar">
-          <img src={img.logo} alt="logo" />
+          <img src={icon.logo} alt="logo" />
         </div>
         <ul className="menu">
           {textsLi.map((x) => (
@@ -22,7 +26,7 @@ export const Navbar = () => {
       </div>
       <div className="icon-cart-and-img">
         <div className="icon-cart">
-          <img src={img.icon_cart} alt="cart" />
+          <IconCart />
         </div>
         <div className="img-avater">
           <img src={img.img_avatar} alt="avatar" />

@@ -1,0 +1,143 @@
+/* Gallery */
+.product-gallery {
+  padding-inline-end: 100px;
+}
+.product-img {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-img img {
+  width: 100%;
+}
+.product-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  row-gap: 20px;
+  overflow: hidden;
+  width: 400px;
+}
+.product-img .image-main {
+  grid-column: 1/5;
+  cursor: auto;
+}
+.product-img .img-product {
+  cursor: pointer;
+}
+.images-product {
+  position: relative;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.l-img_product_1 {
+  background-color: rgba(253, 253, 253, 0.616);
+  border: 2px solid var(--color-orange);
+}
+.layer:hover {
+  background-color: rgba(253, 253, 253, 0.541);
+}
+.img_product_2 {
+  opacity: 0.5;
+}
+.product-img img {
+  border-radius: 10px;
+}
+
+/* info */
+.product-info {
+  padding-top: 50px;
+}
+
+.sneaker-company {
+  padding-bottom: 10px;
+}
+.sneaker-company span {
+  color: var(--color-orange);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.title-sneaker h2 {
+  font-size: 2.5rem;
+  max-width: 400px;
+}
+.about-sneaker p {
+  opacity: 0.75;
+  padding: 30px 0;
+  max-width: 400px;
+  font-size: 0.9rem;
+}
+
+.price-and-discount {
+  display: flex;
+  align-items: center;
+}
+.price-after-discount-sneaker {
+  font-size: 1.6rem;
+  padding-inline-end: 15px;
+}
+.discount-sneaker {
+  background-color: #feefe0;
+  color: var(--color-orange);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 10px;
+
+  font-size: 1rem;
+}
+.price-main {
+  opacity: 0.75;
+  padding: 5px 0;
+}
+
+.number-buy-sneaker {
+  display: flex;
+  margin: 40px 0;
+}
+.number-plus-and-minus {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f7f8fd;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+}
+.icon-plus {
+  cursor: pointer;
+}
+.add-cart-sneaker {
+  padding-inline-start: 20px;
+  width: 100%;
+}
+.add-cart {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: var(--color-orange);
+  color: white;
+  fill: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.add-cart svg {
+  transform: scale(0.75);
+}

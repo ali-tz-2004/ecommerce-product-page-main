@@ -6,29 +6,36 @@
 .navbar {
   color: var(--color-texts);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #1d1f262c;
-  padding: 20px 0;
+  height: 6rem;
 }
 .logo-and-menu {
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 .menu {
   display: flex;
   list-style-type: none;
-  padding-left: 30px;
+  padding-inline-start: 30px;
+  height: calc(100% - 1px);
+  align-items: center;
 }
 .menu li {
+  display: flex;
+  align-items: center;
   opacity: 0.75;
   margin: 0 10px;
   font-size: 1rem;
   cursor: pointer;
-  height: 240%;
+  height: 100%;
 }
 .menu li:hover {
   opacity: 1;
   border-bottom: 3px solid var(--color-orange);
+  margin-bottom: -3px;
 }
 .icon-cart-and-img {
   display: flex;
@@ -37,6 +44,12 @@
   display: flex;
   align-items: center;
   margin: 0 30px;
+}
+.icon-cart #cart {
+  opacity: 0.5;
+}
+.icon-cart #cart:hover {
+  opacity: 1;
 }
 .img-avater {
   width: 50px;
