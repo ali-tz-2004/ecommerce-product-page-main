@@ -10,6 +10,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #1d1f262c;
   height: 6rem;
+  position: relative;
 }
 .logo-and-menu {
   display: flex;

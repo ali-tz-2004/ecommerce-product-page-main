@@ -10,6 +10,15 @@ export const ProductGallery = () => {
 
   const [selectedImage, setSelectedImage] = useState(images[0].img);
 
+  const onClickImage = (img, index) => {
+    setSelectedImage(img);
+    setImages(
+      images.map((x, i) =>
+        i === index ? { ...x, active: true } : { ...x, active: false }
+      )
+    );
+  };
+
   return (
     <div className="product-gallery">
       <div className="product-img">
@@ -20,16 +29,7 @@ export const ProductGallery = () => {
               className={`img-product ${x.class}`}
               src={x.img}
               alt="products"
-              onClick={() => {
-                setSelectedImage(x.img);
-                setImages(
-                  images.map((x, i) =>
-                    i === index
-                      ? { ...x, active: true }
-                      : { ...x, active: false }
-                  )
-                );
-              }}
+              onClick={() => onClickImage(x.img, index)}
             />
             {x.active && <div className={`layer img-layer`}></div>}
           </div>

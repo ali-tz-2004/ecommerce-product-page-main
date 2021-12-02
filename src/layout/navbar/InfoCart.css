@@ -1,0 +1,20 @@
+.page-cart {
+  background-color: white;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.185);
+  position: absolute;
+  top: 5rem;
+  right: -30px;
+  width: 340px;
+  border-radius: 5px;
+}
+.title-cart {
+  border-bottom: 1px solid #1d1f262c;
+  padding: 20px;
+}
+.title-cart h2 {
+  font-size: 1rem;
+}
+.body-cart {
+  padding: 70px 0;
+  text-align: center;
+}

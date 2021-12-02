@@ -1,6 +1,21 @@
 import * as icon from "../../icon/icons";
 import { IconCart } from "../../icon/IconCart";
+import { useState } from "react/cjs/react.development";
 export const ProductInfo = () => {
+  let discountedPrice = 125.0;
+  let rebateKala = 50;
+  let originalPrice = 250.0;
+  let [count, setCount] = useState(0);
+  const clickMinus = () => {
+    let temp = count;
+    temp -= 1;
+    if (temp >= 0) setCount((setCount = temp));
+  };
+  const clickPlus = () => {
+    let temp = count;
+    temp += 1;
+    setCount((setCount = temp));
+  };
   return (
     <div className="product-info">
       <div className="sneaker-company">
@@ -18,18 +33,28 @@ export const ProductInfo = () => {
       </div>
       <div className="price-sneaker">
         <div className="price-and-discount">
-          <h3 className="price-after-discount-sneaker">$125.00</h3>
-          <span className="discount-sneaker">50%</span>
+          <h3 className="price-after-discount-sneaker">${discountedPrice}</h3>
+          <span className="discount-sneaker">{rebateKala}%</span>
         </div>
         <div className="price-main">
-          <del className="price-main-sneaker">$250.00</del>
+          <del className="price-main-sneaker">${originalPrice}</del>
         </div>
       </div>
       <div className="number-buy-sneaker">
         <div className="number-plus-and-minus">
-          <img className="icon icon-plus" src={icon.icon_minus} alt="" />
-          <span className="number-buy">0</span>
-          <img className="icon icon-plus" src={icon.icon_plus} alt="" />
+          <img
+            onClick={clickMinus}
+            className="icon icon-minus"
+            src={icon.icon_minus}
+            alt="icon minus"
+          />
+          <span className="number-buy">{count}</span>
+          <img
+            onClick={clickPlus}
+            className="icon icon-plus"
+            src={icon.icon_plus}
+            alt="icon plus"
+          />
         </div>
         <div className="add-cart-sneaker">
           <button className="add-cart">
@@ -38,7 +63,6 @@ export const ProductInfo = () => {
           </button>
         </div>
       </div>
-      <div></div>
     </div>
   );
 };
