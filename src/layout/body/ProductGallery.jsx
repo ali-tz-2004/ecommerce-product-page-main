@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react/cjs/react.development";
 import * as img from "../../images/images";
 export const ProductGallery = () => {
   const [images, setImages] = useState([

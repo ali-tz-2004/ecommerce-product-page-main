@@ -1,21 +1,37 @@
 import * as icon from "../../icon/icons";
 import { IconCart } from "../../icon/IconCart";
 import { useState } from "react/cjs/react.development";
+import { useContext } from "react";
+import MainContext from "../../context/main-context";
+
 export const ProductInfo = () => {
   let discountedPrice = 125.0;
   let rebateKala = 50;
   let originalPrice = 250.0;
   let [count, setCount] = useState(0);
+
+  const context = useContext(MainContext);
+
   const clickMinus = () => {
     let temp = count;
     temp -= 1;
     if (temp >= 0) setCount((setCount = temp));
   };
+
   const clickPlus = () => {
     let temp = count;
     temp += 1;
     setCount((setCount = temp));
   };
+
+  const addCard = () => {
+    context.addValue({
+      name: "Fall Limited Edition Sneakers",
+      count,
+      unitPrice: discountedPrice,
+    });
+  };
+
   return (
     <div className="product-info">
       <div className="sneaker-company">
@@ -57,7 +73,7 @@ export const ProductInfo = () => {
           />
         </div>
         <div className="add-cart-sneaker">
-          <button className="add-cart">
+          <button className="add-cart" onClick={addCard}>
             <IconCart />
             Add to cart
           </button>

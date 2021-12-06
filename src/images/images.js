@@ -8,3 +8,4 @@ export { default as img_product_3_thumbnail } from "./image-product-3-thumbnail.
 export { default as img_product_3 } from "./image-product-3.jpg";
 export { default as img_product_4_thumbnail } from "./image-product-4-thumbnail.jpg";
 export { default as img_product_4 } from "./image-product-4.jpg";
+// img_product_1_thumbnail

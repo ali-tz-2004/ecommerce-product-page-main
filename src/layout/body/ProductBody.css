@@ -1,7 +1,4 @@
 /* Gallery */
-.product-gallery {
-  padding-inline-end: 100px;
-}
 .product-img {
   width: 300px;
   border-radius: 10px;
@@ -102,6 +99,7 @@
   display: flex;
   margin: 40px 0;
 }
+
 .number-plus-and-minus {
   padding: 2px;
   display: flex;
@@ -115,6 +113,11 @@
 .icon {
   cursor: pointer;
 }
+
+.number-buy {
+  font-weight: bold;
+}
+
 .icon:hover {
   opacity: 0.75;
 }

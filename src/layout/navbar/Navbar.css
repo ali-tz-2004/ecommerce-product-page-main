@@ -45,12 +45,23 @@
   display: flex;
   align-items: center;
   margin: 0 30px;
+  position: relative;
 }
 .icon-cart #cart {
   opacity: 0.5;
 }
 .icon-cart #cart:hover {
   opacity: 1;
+}
+.icon-cart-count {
+  background-color: var(--color-orange);
+  position: absolute;
+  right: -8px;
+  top: 6px;
+  font-size: 10px;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
 }
 .img-avater {
   width: 50px;
