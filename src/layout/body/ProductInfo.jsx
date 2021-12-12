@@ -1,8 +1,8 @@
-import * as icon from "../../icon/icons";
-import { IconCart } from "../../icon/IconCart";
+import * as icon from "../../icon/Icons";
 import { useState } from "react/cjs/react.development";
 import { useContext } from "react";
 import MainContext from "../../context/main-context";
+import { IconCart } from "../../icon/Svgs";
 
 export const ProductInfo = () => {
   let discountedPrice = 125.0;

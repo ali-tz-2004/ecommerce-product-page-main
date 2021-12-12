@@ -2,7 +2,7 @@ import { useContext } from "react";
 import MainContext from "../../context/main-context";
 import "./InfoCart.css";
 import * as img from "../../images/images";
-import { IconDelete } from "../../icon/IconDelete";
+import { IconDelete } from "../../icon/Svgs";
 
 export const InfoCart = (props) => {
   const context = useContext(MainContext);

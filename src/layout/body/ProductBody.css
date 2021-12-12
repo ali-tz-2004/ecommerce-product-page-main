@@ -12,7 +12,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   row-gap: 20px;
-  overflow: hidden;
   width: 400px;
 }
 .product-img .image-main {
@@ -23,7 +22,7 @@
   cursor: pointer;
 }
 .product-img .img-product:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .images-product {
   position: relative;
@@ -39,11 +38,86 @@
   background-color: rgba(253, 253, 253, 0.616);
   border: 2px solid var(--color-orange);
 }
-.layer:hover {
-  background-color: rgba(253, 253, 253, 0.541);
-}
 .product-img img {
   border-radius: 10px;
+}
+
+/* carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #404040b4;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.icon-close {
+  text-align: right;
+}
+
+.carousel .product-img {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px;
+  row-gap: 0px;
+  width: 400px;
+  padding: 20px;
+}
+
+.icon-close {
+  padding: 1.5rem 0;
+}
+
+.carousel-img-main {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-previous {
+  left: -20px;
+}
+.icon-next {
+  right: -20px;
+}
+
+.icon-previous,
+.icon-next {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-close path:hover {
+  fill: var(--color-orange);
+}
+
+.icon-previous:hover path,
+.icon-next:hover path {
+  stroke: var(--color-orange);
+}
+.carousel .carousel-images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.carousel .images-product {
+  width: 70px;
+  margin: 0 0.5rem;
 }
 
 /* info */
