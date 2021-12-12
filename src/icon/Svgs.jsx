@@ -1,8 +1,9 @@
-export const IconCart = () => {
+export const IconCart = ({ className }) => {
   return (
     <svg
       id="icon-cart"
       width="22"
+      className={className}
       height="20"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -14,11 +15,12 @@ export const IconCart = () => {
   );
 };
 
-export const IconDelete = () => {
+export const IconDelete = ({ className }) => {
   return (
     <svg
       id="icon-delete"
       width="14"
+      className={className}
       height="16"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -30,11 +32,12 @@ export const IconDelete = () => {
   );
 };
 
-export const IconClose = () => {
+export const IconClose = ({ className }) => {
   return (
     <svg
       id="icon-close"
       width="14"
+      className={className}
       height="15"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -47,11 +50,12 @@ export const IconClose = () => {
   );
 };
 
-export const IconPrevious = () => {
+export const IconPrevious = ({ className }) => {
   return (
     <svg
       id="icon-previous"
       width="12"
+      className={className}
       height="18"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -66,12 +70,13 @@ export const IconPrevious = () => {
   );
 };
 
-export const IconNext = () => {
+export const IconNext = ({ className }) => {
   return (
     <svg
       id="icon-next"
       width="12"
       height="18"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

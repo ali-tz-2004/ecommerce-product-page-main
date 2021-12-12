@@ -49,11 +49,13 @@ export const ProductInfo = () => {
       </div>
       <div className="price-sneaker">
         <div className="price-and-discount">
-          <h3 className="price-after-discount-sneaker">${discountedPrice}</h3>
+          <h3 className="price-after-discount-sneaker">
+            ${discountedPrice}.00
+          </h3>
           <span className="discount-sneaker">{rebateKala}%</span>
         </div>
         <div className="price-main">
-          <del className="price-main-sneaker">${originalPrice}</del>
+          <del className="price-main-sneaker">${originalPrice}.00</del>
         </div>
       </div>
       <div className="number-buy-sneaker">

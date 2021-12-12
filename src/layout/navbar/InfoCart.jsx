@@ -33,7 +33,7 @@ export const InfoCart = (props) => {
               <div className="text-cart">
                 <span className="about-cart">
                   ${nameKala} ${unitKala} &#215; ${countKala}
-                  <b> ${unitPrice}</b>
+                  <b> ${unitPrice}.00</b>
                 </span>
               </div>
               <div className="icon-delete">
