@@ -17,17 +17,17 @@
 }
 .body-cart {
   padding: 1rem;
-  height: 160px;
 }
 .info-kala {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .text-cart {
   width: 14rem;
   margin: 0 1rem;
 }
 .about-cart {
-  /* font-size: 0.9rem; */
   line-height: 1.5rem;
   opacity: 0.75;
 }
@@ -65,4 +65,28 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding: 50px 0;
+}
+
+@media (max-width: 480px) {
+  .page-cart {
+    top: 4.5rem;
+    bottom: 0;
+    height: 17rem;
+    right: 0.5rem;
+    width: auto;
+    left: 0.5rem;
+  }
+  .body-cart {
+    height: calc(100% - 61px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .defult-info-cart {
+    height: 100%;
+  }
+  .image-cart {
+    width: 65px;
+  }
 }

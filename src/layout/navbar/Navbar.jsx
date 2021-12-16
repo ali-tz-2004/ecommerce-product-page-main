@@ -6,7 +6,7 @@ import { InfoCart } from "./InfoCart";
 import { useContext, useEffect, useRef, useState } from "react";
 import MainContext from "../../context/main-context";
 import { useOnClickOutside } from "../../utils/utils";
-import { IconCart } from "../../icon/Svgs";
+import { IconCart, IconClose, IconMenu } from "../../icon/Svgs";
 
 export const Navbar = () => {
   const context = useContext(MainContext);
@@ -23,6 +23,7 @@ export const Navbar = () => {
   ];
 
   const [cartVisible, setcartVisible] = useState(false);
+  const [menu, setmenu] = useState(false);
   const [count, setCount] = useState(0);
 
   const checkCart = () => {
@@ -31,23 +32,47 @@ export const Navbar = () => {
 
   useOnClickOutside(ref, () => setcartVisible(false));
 
+  const menuHandler = () => {
+    setmenu(!menu);
+  };
+
   useEffect(() => {
     let countTemp = 0;
     context.product.map((x) => (countTemp = countTemp + x.count));
     setCount(countTemp);
   }, [context.product]);
 
+  useEffect(() => {
+    if (menu) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "scroll";
+  }, [menu]);
+
   return (
     <nav className="navbar">
       <div className="logo-and-menu">
+        <div className="icon-menu" onClick={menuHandler}>
+          <IconMenu />
+        </div>
         <div className="logo-navbar">
           <img src={icon.logo} alt="logo" />
         </div>
-        <ul className="menu">
+        <ul className="menu menu-desk">
           {textsLi.map((x) => (
             <li key={x.id}>{x.text}</li>
           ))}
         </ul>
+        {menu && (
+          <div className="page-menu" onClick={menuHandler}>
+            <ul className="menu" onClick={(e) => e.stopPropagation()}>
+              <div className="icon-close-menu">
+                <IconClose onClick={menuHandler} />
+              </div>
+              {textsLi.map((x) => (
+                <li key={x.id}>{x.text}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div ref={ref} className="icon-cart-and-img">
         <div onClick={checkCart} className="icon-cart">
@@ -55,7 +80,7 @@ export const Navbar = () => {
           {count !== 0 && <span className="icon-cart-count">{count}</span>}
         </div>
         {cartVisible && <InfoCart infoCart={infoCart} />}
-        <div className="img-avater">
+        <div className="img-avater selectDisable">
           <img src={img.img_avatar} alt="avatar" />
         </div>
       </div>

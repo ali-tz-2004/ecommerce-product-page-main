@@ -15,6 +15,7 @@ export const ProductPreviewPopup = ({ visible, onClose, index }) => {
 
     setImages(imagesTemp);
   }, [currentImageIndex]);
+
   useEffect(() => {
     setCurrentImageIndex(index);
   }, [index]);

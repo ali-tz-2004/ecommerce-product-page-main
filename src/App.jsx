@@ -12,9 +12,11 @@ export const App = () => {
         <header>
           <Navbar />
         </header>
-        <section>
-          <ProductBody />
-        </section>
+        <main>
+          <section>
+            <ProductBody />
+          </section>
+        </main>
       </div>
     </MainContext.Provider>
   );

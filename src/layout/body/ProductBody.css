@@ -1,18 +1,21 @@
 /* Gallery */
+.product-img-mobile {
+  display: none !important;
+}
 .product-img {
   width: 300px;
   border-radius: 10px;
   overflow: hidden;
-}
-.product-img img {
-  width: 100%;
-}
-.product-img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   row-gap: 20px;
   width: 400px;
+}
+
+.product-img img {
+  width: 100%;
+  border-radius: 10px;
 }
 .product-img .image-main {
   grid-column: 1/5;
@@ -37,9 +40,6 @@
   border-radius: 10px;
   background-color: rgba(253, 253, 253, 0.616);
   border: 2px solid var(--color-orange);
-}
-.product-img img {
-  border-radius: 10px;
 }
 
 /* carousel */
@@ -88,6 +88,11 @@
   right: -20px;
 }
 
+.icon-previous path,
+.icon-next path {
+  stroke-width: "1";
+}
+
 .icon-previous,
 .icon-next {
   background-color: white;
@@ -123,6 +128,7 @@
 /* info */
 .product-info {
   padding-top: 50px;
+  width: 400px;
 }
 
 .sneaker-company {
@@ -137,12 +143,10 @@
 
 .title-sneaker h2 {
   font-size: 2.5rem;
-  max-width: 400px;
 }
 .about-sneaker p {
   opacity: 0.75;
   padding: 30px 0;
-  max-width: 400px;
   font-size: 0.9rem;
 }
 
@@ -221,4 +225,69 @@
 }
 .add-cart svg {
   transform: scale(0.75);
+}
+
+@media (max-width: 480px) {
+  /* ProductGallery */
+  .product-img-desk {
+    display: none !important;
+  }
+  .product-img-mobile {
+    display: flex !important;
+  }
+  .product-img {
+    display: flex;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+  }
+  .product-img img {
+    border-radius: 0;
+  }
+  .icon-previous path,
+  .icon-next path {
+    stroke-width: "3";
+  }
+  .icon-previous-mobile,
+  .icon-next-mobile {
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 0;
+  }
+  .icon-previous-mobile {
+    left: 10%;
+  }
+  .icon-previous-mobile {
+    right: 10%;
+  }
+
+  /* ProductInfo */
+  .product-info {
+    padding: 15px;
+    width: 100%;
+  }
+  .title-sneaker h2 {
+    font-size: 1.8rem;
+  }
+  .about-sneaker p {
+    padding: 15px 0;
+    font-size: 1.1rem;
+  }
+  .price-sneaker {
+    display: flex;
+    justify-content: space-between;
+  }
+  .number-buy-sneaker {
+    flex-direction: column;
+  }
+  .number-plus-and-minus {
+    width: 100%;
+    height: 50px;
+  }
+  .add-cart-sneaker {
+    padding-inline-start: 0;
+    margin-top: 20px;
+    height: 50px;
+  }
 }

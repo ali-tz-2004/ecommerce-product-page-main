@@ -5,5 +5,16 @@
 section {
   display: flex;
   justify-content: space-around;
-  margin: 80px 40px;
+  margin: 10rem 4rem;
+}
+
+@media (max-width: 480px) {
+  .full-page {
+    margin: auto;
+    width: auto;
+  }
+  section {
+    flex-direction: column;
+    margin: 0;
+  }
 }

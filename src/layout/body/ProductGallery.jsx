@@ -26,8 +26,8 @@ export const ProductGallery = () => {
   }, [currentImageIndex]);
 
   useEffect(() => {
-    if (visiblePreview) document.body.style.overflowY = "hidden";
-    else document.body.style.overflowY = "scroll";
+    if (visiblePreview) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "scroll";
   }, [visiblePreview]);
 
   return (
@@ -37,6 +37,7 @@ export const ProductGallery = () => {
         setVisiblePreview={setVisiblePreview}
         images={images}
         setCurrentImageIndex={setCurrentImageIndex}
+        currentImageIndex={currentImageIndex}
       />
       <ProductPreviewPopup
         visible={visiblePreview}

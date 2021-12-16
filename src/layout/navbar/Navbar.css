@@ -10,12 +10,19 @@
   justify-content: space-between;
   border-bottom: 1px solid #1d1f262c;
   height: 6rem;
-  position: relative;
+  position: fixed;
+  width: 1100px;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 .logo-and-menu {
   display: flex;
   align-items: center;
   height: 100%;
+}
+.icon-close-menu {
+  display: none;
 }
 .menu {
   display: flex;
@@ -38,6 +45,9 @@
   border-bottom: 3px solid var(--color-orange);
   margin-bottom: -3px;
 }
+.icon-menu {
+  display: none;
+}
 .icon-cart-and-img {
   display: flex;
 }
@@ -47,10 +57,10 @@
   margin: 0 30px;
   position: relative;
 }
-.icon-cart #cart {
+.icon-cart #icon-cart {
   opacity: 0.5;
 }
-.icon-cart #cart:hover {
+.icon-cart #icon-cart:hover {
   opacity: 1;
 }
 .icon-cart-count {
@@ -75,4 +85,81 @@
 .img-avater img {
   width: 50px;
   height: auto;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    border: none;
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    background-color: white;
+  }
+  .menu-desk {
+    display: none;
+  }
+  .page-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #404040b4;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .icon-close-menu {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    opacity: 0.5;
+    margin-bottom: 30px;
+  }
+  .icon-close-menu svg path {
+    fill: black;
+  }
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    background-color: white;
+    width: 60%;
+    padding: 20px;
+  }
+  .menu li {
+    left: 0;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    height: auto;
+    opacity: 1;
+    font-weight: bold;
+    padding: 15px 0;
+  }
+  .menu li:hover {
+    border: 0;
+    margin-bottom: 0;
+  }
+  .logo-navbar img {
+    width: 8rem;
+  }
+  .icon-menu {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 100%;
+  }
+
+  .icon-menu svg {
+    transform: scale(1.25);
+  }
+  .img-avater {
+    transform: scale(0.5);
+  }
+  .icon-cart {
+    margin: 0;
+  }
 }

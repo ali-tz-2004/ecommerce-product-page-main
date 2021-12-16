@@ -20,7 +20,7 @@ export const InfoCart = (props) => {
 
   return (
     <div className="page-cart">
-      <div className="title-cart">
+      <div className="title-cart selectDisable">
         <h2>Cart</h2>
       </div>
       <div className="body-cart">
@@ -32,7 +32,7 @@ export const InfoCart = (props) => {
               </div>
               <div className="text-cart">
                 <span className="about-cart">
-                  ${nameKala} ${unitKala} &#215; ${countKala}
+                  {nameKala} ${unitKala} &#215; ${countKala}
                   <b> ${unitPrice}.00</b>
                 </span>
               </div>
